@@ -1,0 +1,80 @@
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.pidev.cameracontroller.OrderMove"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/lollipop_red"
+            android:text="Functions"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/header" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Take a shot"
+                android:checked="true"
+                android:id="@+id/functionShot" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wait, s."
+                android:id="@+id/functionDelay"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1">
+
+                <SeekBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/functionWaitSeek"
+                    android:max="19"
+                    android:progress="9"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:text="5"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/functionWaitEdit"
+                    android:background="@drawable/edit_text"
+                    android:layout_gravity="center_vertical" />
+
+            </LinearLayout>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stop"
+                android:id="@+id/functionStop"
+                android:layout_marginTop="10dp" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+</LinearLayout>
